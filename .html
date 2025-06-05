@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animales Raros</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Banner */
+        header {
+            background: linear-gradient(45deg, #4CAF50, #2E8B57);
+            color: white;
+            padding: 30px;
+            font-size: 24px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Navegación */
+        nav ul {
+            list-style: none;
+            padding: 15px;
+            background: #333;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Secciones */
+        section {
+            padding: 20px;
+            width: 80%;
+            max-width: 1000px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Galería de imágenes */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: auto;
+            margin: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 15px;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🌎 Animales Raros del Mundo</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#informacion">Información</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#imagenes">Imágenes</a></li>
+        </ul>
+    </nav>
+
+    <section id="informacion">
+        <h2>Información General</h2>
+        <p>Hay muchos insectos y animales extraños en el mundo. Algunos de los insectos más raros incluyen el insecto palo malasio, el escarabajo de la tortuga y la hormiga panda. También hay criaturas sorprendentes como el pez rosado con manos y el lagarto Leiolepis ngovantrii.Estos animales pueden encontrarse en diversos ecosistemas, desde las profundidades marinas hasta selvas tropicales. Muchos de ellos son difíciles de estudiar debido a su escasez o hábitats remotos. Además, algunos están en peligro de extinción debido a la pérdida de su entorno natural y la actividad humana</p>
+    </section>
+
+    <section id="habilidades">
+        <h2>Habilidades Únicas</h2>
+        <ul>
+            <li><strong>Ornitorrinco:</strong> Posee electro-recepción, lo que le permite detectar campos eléctricos generados por los movimientos de sus presas.</li>
+            <li><strong>Halcón peregrino:</strong> Es el animal más rápido del mundo, alcanzando velocidades de hasta 390 km/h cuando se lanza sobre su presa.</li>
+            <li><strong>Pulpo mimo :</strong> No solo cambia de color, sino que imita el comportamiento de otros animales para evitar depredadores.</li>
+            <li><strong>Escarabajo coleóptero:</strong> Tiene una fuerza increíble, capaz de levantar objetos 1,400 veces más pesados que su propio cuerpo.</li>
+            <li><strong>Oso de agua :</strong> Es prácticamente invulnerable, sobreviviendo a temperaturas extremas, radiación intensa e incluso al vacío del espacio.</li>
+            <li><strong>Rana peluda:</strong> Posee garras retráctiles que usa para defenderse, similares a las de Wolverine.</li>
+        </ul>
+    </section>
+
+    <section id="imagenes">
+        <h2>imagenes de Animales Raros</h2>
+        <div class="gallery">
+            <img src="axolote.JPG" alt="Axolote">
+            <img src="okapi.jpg" alt="Okapi">
+            <img src="narval.html.jpg" alt="Narval">
+            <img src="dragon.html.jpg" alt="Dragón azul">
+            <img src="ornitorrinco.jpg" alt="Ornitorrinco">
+            <img src="halcón peregrino.jpg" alt="Halcón peregrino">
+            <img src="pulpo.m.jpg" alt="Pulpo mimo">
+            <img src="escarabajo.b.jpg" alt="Escarabajo coleóptero">
+            <img src="tardigrado.jpg" alt="Oso de agua">
+            <img src="rana.p.jpg" alt="Rana peluda">
+        </div>
+    </section>
+
+    <footer>
+        <p>Animales Raros © 2025</p>
+    </footer>
+
+    <script>
+        // Animaciones al hacer scroll
+        document.addEventListener("DOMContentLoaded", function () {
+            let sections = document.querySelectorAll("section");
+
+            window.addEventListener("scroll", function () {
+                sections.forEach(section => {
+                    let sectionTop = section.getBoundingClientRect().top;
+                    if (sectionTop < window.innerHeight - 100) {
+                        section.classList.add("visible");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
